@@ -1,0 +1,99 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  font-family: "Dancing Script", cursive;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+#content {
+  height: 100%;
+  background-image: url(../src/greek-pie-bg.avif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: lightgray;
+}
+
+.holy-grail {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 10fr 1fr;
+}
+
+.nav {
+  text-align: center;
+  background-color: rgba($color: lightgray, $alpha: 0.7);
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.title p {
+  font-weight: 600;
+  font-size: 48px;
+  color: darkslategray;
+}
+
+.head-links {
+  list-style: none;
+  padding: 4%;
+
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: darkslategray;
+
+    &:hover {
+      color: chocolate;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.card {
+  width: clamp(200px, 80%, 400px);
+  height: clamp(220px, 70%, 460px);
+  background-color: rgba($color: silver, $alpha: 0.7);
+  border: solid 2px chocolate;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr;
+}
+
+.card-title {
+  font-size: 44px;
+  color: darkslategray;
+}
+
+.card-body {
+  font-size: 34px;
+  align-self: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgba($color: lightgray, $alpha: 0.6);
+
+  p {
+    background-color: rgba($color: darkslategray, $alpha: 1);
+    text-align: center;
+    color: chocolate;
+  }
+}
