@@ -1,4 +1,6 @@
+import { aboutLoad } from "./aboutLoad";
 import { createCard } from "./createCard";
+import { homeLoad } from "./homeLoad";
 import { menuLoad } from "./menuLoad";
 
 function initialLoad() {
@@ -24,9 +26,11 @@ function initialLoad() {
   // Nav-links
 
   const homeLink = new navLink("#", "Home").link;
+  homeLink.addEventListener("click", homeLoad);
   const menuLink = new navLink("#", "Menu").link;
   menuLink.addEventListener("click", menuLoad);
   const aboutLink = new navLink("#", "About").link;
+  aboutLink.addEventListener("click", aboutLoad);
 
   const homeItem = document.createElement("li");
   const menuItem = document.createElement("li");
@@ -57,16 +61,16 @@ function initialLoad() {
 
   // Main
 
-  const card = createCard(
-    "Original flavors only!",
+  const homeCard = createCard(
+    "Try our famous local cuisine!",
     null,
-    "Check out our menu...",
+    "Check out the menu...",
     null
   );
 
   const main = document.createElement("div");
   main.classList.add("main");
-  main.appendChild(card);
+  main.appendChild(homeCard);
 
   // Footer
 
@@ -74,6 +78,8 @@ function initialLoad() {
   footer.classList.add("footer");
   const footerP = document.createElement("p");
   footerP.textContent = "Developed by";
+  footerP.innerHTML +=
+    '<a href="https://github.com/tho-daskalakis">tho-daskalakis</a>';
   footer.appendChild(footerP);
 
   // Page structure
