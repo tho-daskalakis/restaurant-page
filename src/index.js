@@ -1,3 +1,3 @@
-import { loadHomePage } from "./loadHomePage";
+import { initialLoad } from "./initialLoad";
 
-loadHomePage();
+initialLoad();

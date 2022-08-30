@@ -1,4 +1,4 @@
-function loadHomePage() {
+function initialLoad() {
   // Classes
 
   class Card {
@@ -104,4 +104,4 @@ function loadHomePage() {
   content.appendChild(holyGrail);
 }
 
-export { loadHomePage };
+export { initialLoad };
