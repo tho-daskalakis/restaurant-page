@@ -1,30 +1,8 @@
+import { createCard } from "./createCard";
+import { menuLoad } from "./menuLoad";
+
 function initialLoad() {
   // Classes
-
-  class Card {
-    constructor(titleText, bodyText) {
-      this.titleText = titleText;
-      this.bodyText = bodyText;
-    }
-
-    get card() {
-      const card = document.createElement("div");
-      card.classList.add("card");
-
-      const cardTitle = document.createElement("div");
-      cardTitle.classList.add("card-title");
-      cardTitle.textContent = this.titleText;
-
-      const cardBody = document.createElement("div");
-      cardBody.classList.add("card-body");
-      cardBody.textContent = this.bodyText;
-
-      card.appendChild(cardTitle);
-      card.appendChild(cardBody);
-
-      return card;
-    }
-  }
 
   class navLink {
     constructor(href, textContent) {
@@ -47,6 +25,7 @@ function initialLoad() {
 
   const homeLink = new navLink("#", "Home").link;
   const menuLink = new navLink("#", "Menu").link;
+  menuLink.addEventListener("click", menuLoad);
   const aboutLink = new navLink("#", "About").link;
 
   const homeItem = document.createElement("li");
@@ -78,7 +57,12 @@ function initialLoad() {
 
   // Main
 
-  const card = new Card("Original flavors only!", "Check out our menu...").card;
+  const card = createCard(
+    "Original flavors only!",
+    null,
+    "Check out our menu...",
+    null
+  );
 
   const main = document.createElement("div");
   main.classList.add("main");
