@@ -41,7 +41,7 @@ body {
   color: darkslategray;
 }
 
-.head-links {
+.ul-links {
   list-style: none;
   padding: 4%;
 
@@ -66,14 +66,16 @@ body {
 
 .card {
   width: clamp(200px, 80%, 400px);
-  height: clamp(220px, 70%, 460px);
+  height: clamp(220px, 100%, 460px);
+  padding: 1%;
   background-color: rgba($color: silver, $alpha: 0.7);
   border: solid 2px chocolate;
   border-radius: 10px;
+  font-family: "Fira Sans", sans-serif;
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 .card-title {
@@ -89,7 +91,6 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  background-color: rgba($color: lightgray, $alpha: 0.6);
 
   p {
     background-color: rgba($color: darkslategray, $alpha: 1);
