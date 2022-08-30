@@ -3,9 +3,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow: auto;
   font-family: "Dancing Script", cursive;
   font-size: 36px;
   font-weight: 500;
+}
+
+p {
+  margin: 0;
 }
 
 #content {
@@ -53,7 +58,14 @@ body {
 }
 
 .main {
-  display: flex;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 410px));
+  grid-auto-columns: minmax(210px, 410px);
+  grid-auto-rows: minmax(230px, 470px);
+  gap: 8px;
   justify-content: center;
   align-self: center;
 }
@@ -68,17 +80,32 @@ body {
   font-family: "Fira Sans", sans-serif;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 3fr;
 }
 
 .card-title {
-  font-size: 44px;
+  font-size: 36px;
   color: darkslategray;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+}
+.card-title .price {
+  text-align: end;
 }
 
 .card-body {
-  font-size: 34px;
+  height: 100%;
+  font-size: 28px;
+  font-style: italic;
   align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-body img {
+  width: clamp(180px, 90%, 380px);
+  height: clamp(180px, 90%, 380px);
 }
 
 .footer {
@@ -86,6 +113,7 @@ body {
   justify-content: center;
 }
 .footer p {
+  margin: 2%;
   background-color: darkslategray;
   text-align: center;
   color: chocolate;
