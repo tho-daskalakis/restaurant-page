@@ -5,7 +5,7 @@ body {
   height: 100%;
   overflow: auto;
 
-  font-family: "Dancing Script", cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 36px;
   font-weight: 500;
 }
@@ -16,7 +16,7 @@ p {
 
 #content {
   height: 100%;
-  background-image: url(../src/greek-pie-bg.avif);
+  background-image: url(./images/greek-pie-bg.avif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
